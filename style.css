@@ -1,0 +1,176 @@
+#container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+
+    left: 0;
+    right: 0%;
+    bottom: 0%;
+
+    top: 0%;
+    flex-direction: column;
+    background: linear-gradient(to top, rgb(163, 57, 66), rgb(160, 82, 136), rgb(116, 102, 156));
+
+    justify-content: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#td-list li,
+#attention {
+    border-radius: 9px;
+}
+
+#td-list {
+    padding: 30px;
+    position: absolute;
+    top: 36%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    width: 50% !important;
+}
+.list {
+    list-style-position: inside;
+    display: flex;
+    align-items: center;
+    margin: 1px 0;
+    justify-content: space-around;
+    position: relative;
+    z-index: 9999;
+    align-self: center;
+}
+#add-panel {
+    position: relative;
+    width: 100%;
+
+    margin: 9px 0;
+    border-radius: 3px;
+
+    display: grid;
+    grid-template-columns: auto 14%;
+
+    height: auto;
+}
+ 
+.add-btn,
+#td-inp {
+    padding: 9px;
+    background: #fafafa;
+}
+.add-btn {
+    border: 1px solid lightgreen;
+
+    font-weight: 600;
+    color: green;
+    border-radius: 3px;
+
+    right: 0;
+    border-radius: 0 12px 3px 0;
+}
+.add-btn:active {
+    background: darkgreen;
+    color: #fafafa;
+}
+#td-inp::placeholder {
+    color: #333 !important;
+    text-indent: 9px;
+}
+
+#td-inp {
+    position: relative;
+
+    border-radius: 9px 0 0 9px;
+    border: 1px solid rgb(106, 143, 103);
+}
+#list-txt {
+    position: relative;
+    width: 100%;
+}
+.like {
+    color: red;
+    transition: 0.33s;
+}
+.like:active {
+    transform: scale(0.3);
+}
+.right {
+    display: flex;
+    justify-content: space-around;
+    width: calc(20% + 10px);
+    padding: 9px;
+    position: absolute;
+    right: 1px;
+    z-index: 3;
+}
+.right span {
+    transform: scale(0.8);
+    font-weight: 400;
+    color: #636363;
+}
+
+input[type="checkbox"] {
+    left: 0;
+    position: relative;
+}
+.left {
+    width: 65% !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 9px;
+    position: absolute;
+    left: 9px;
+    width: 100%;
+}
+.tl-text {
+    overflow: hidden;
+    color: #333;
+    vertical-align: text-bottom;
+    margin-left: 6px;
+    padding: 9px 1px;
+    outline: 0;
+}
+
+#td-inp:focus {
+    background: lightyellow;
+    border: 1px solid darkgreen !important;
+}
+
+#attention {
+    background: rgb(233, 41, 121);
+    padding: 6px;
+    text-align: center;
+    color: #fafafa;
+    display: none;
+    margin: 9px;
+    position: relative;
+    z-index: 999;
+}
+.list {
+    list-style: decimal;
+    padding: 20px;
+    position: relative;
+    z-index: 9999;
+}
+.list:nth-child(even) {
+    background: rgb(210, 255, 137);
+}
+.list:nth-child(odd) {
+    background: lightyellow;
+    border-bottom: 1px solid #dddddd;
+}
+
+@media screen and (max-width: 880px) {
+    #td-list {
+        top: 40%;
+        transform: scale(1.1);
+        width: 65% !important;
+    }
+}
+@media screen and (max-width: 720px) {
+    #td-list {
+        top: 40%;
+        width: 70% !important;
+    }
+}
